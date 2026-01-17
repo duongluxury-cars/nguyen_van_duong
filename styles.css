@@ -1,0 +1,363 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #e9ecef; /* Xám nhạt thay cho hồng nhạt #fef2f4 */
+    color: #343a40; /* Xám đậm thay cho #4a4a4a */
+}
+
+/* Header */
+header {
+    padding: 15px 50px;
+    background: linear-gradient(90deg, #007bff, #66b0ff, #cce5ff); /* Xanh dương đậm -> nhạt thay cho hồng */
+    border-bottom: 1px solid #66b0ff; /* Viền xanh thay cho #ffb6c1 */
+    box-shadow: 0 2px 10px rgba(0, 123, 255, 0.3); /* Bóng xanh thay cho hồng */
+}
+
+/* Header Container */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-section {
+    flex-shrink: 0;
+    margin-right: 30px;
+}
+
+.logo {
+    height: 50px;
+    display: block;
+}
+
+/* Search Section */
+.search-section {
+    flex-grow: 1;
+    max-width: 500px;
+}
+
+.search-section form {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.3); /* Giữ độ trong suốt */
+    border-radius: 25px;
+    padding: 5px;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2); /* Bóng xanh thay cho hồng */
+    transition: all 0.3s ease;
+}
+
+.search-section form:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.search-input {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    width: 100%;
+    font-size: 16px;
+    outline: none;
+    background: transparent;
+    color: #fff; /* Giữ chữ trắng cho tương phản */
+}
+
+.search-input::placeholder {
+    color: #cce5ff; /* Xanh nhạt thay cho #ffe6eb */
+}
+
+.search-input:focus {
+    border-color: #0056b3; /* Xanh đậm thay cho #ff4d6d */
+}
+
+.search-button {
+    padding: 12px 20px;
+    background: linear-gradient(90deg, #0056b3, #3399ff); /* Xanh đậm -> sáng thay cho hồng */
+    color: white;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 86, 179, 0.5); /* Bóng xanh đậm */
+}
+
+/* Contact Section */
+.contact-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 30px;
+}
+
+.contact-section a {
+    color: #f8f9fa; /* Xám trắng thay cho #fff4e6 */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.contact-section a:hover {
+    color: #cce5ff; /* Xanh nhạt thay cho #ffccd5 */
+}
+
+.cart-count {
+    background-color: #0056b3; /* Xanh đậm thay cho #ff4d6d */
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* User Menu */
+.user-menu {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.user-icon {
+    font-size: 24px;
+    margin-right: 5px;
+    vertical-align: middle;
+    color: #f8f9fa; /* Xám trắng thay cho #fff4e6 */
+}
+
+.user-info {
+    color: #f8f9fa; /* Xám trắng thay cho #fff4e6 */
+    font-weight: bold;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #fff; /* Giữ trắng cho dropdown */
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 123, 255, 0.2); /* Bóng xanh thay cho hồng */
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.dropdown-menu a {
+    color: #007bff; /* Xanh dương thay cho #ff6b95 */
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    font-weight: normal;
+}
+
+.dropdown-menu a:hover {
+    background-color: #e9ecef; /* Xám nhạt thay cho #ffe6eb */
+}
+
+.user-menu:hover .dropdown-menu {
+    display: block;
+}
+
+/* Container */
+.container {
+    display: flex;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+/* Product List */
+.product-list {
+    flex-grow: 1;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product {
+    background: #f8f9fa; /* Xám trắng thay cho #fff */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.1); /* Bóng xanh thay cho hồng */
+    text-align: center;
+    width: 250px;
+    height: 400px;
+    transition: transform 0.5s ease-out, box-shadow 0.3s ease;
+    border: 1px solid #cce5ff; /* Viền xanh nhạt thay cho #ffe6eb */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 15px rgba(0, 123, 255, 0.3); /* Bóng xanh thay cho hồng */
+}
+
+.product-image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.product img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product__discount {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #0056b3; /* Xanh đậm thay cho #ff4d6d */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.product h3 {
+    font-size: 15px;
+    margin: 10px 0;
+    color: #007bff; /* Xanh dương thay cho #ff6b95 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.price {
+    color: #0056b3; /* Xanh đậm thay cho #ff4d6d */
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.product__button {
+    flex: 1;
+    padding: 8px;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(90deg, #007bff, #66b0ff); /* Xanh dương thay cho hồng */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+    font-size: 14px;
+}
+
+.product__button:hover {
+    background: linear-gradient(90deg, #0056b3, #3399ff); /* Xanh đậm -> sáng thay cho hồng */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(90deg, #007bff, #66b0ff); /* Xanh dương thay cho hồng */
+    margin-top: 20px;
+    color: #fff;
+}
+
+.copy-right::before {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 0.5px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Ad Banner */
+/* Ad Banner Improvements */
+.ad-banner {
+    max-width: 1200px;
+    margin: 20px auto;
+    height: 200px; /* Tăng chiều cao để hình ảnh rõ hơn */
+    position: relative;
+    overflow: hidden;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2);
+}
+
+.ad-banner-inner {
+    display: flex;
+    height: 100%;
+    width: 300%; /* 3 ảnh, mỗi ảnh 100% */
+    transition: transform 0.5s ease-in-out;
+}
+
+.ad-banner-inner img {
+    width: 33.33%; /* Mỗi ảnh chiếm 1/3 chiều rộng */
+    height: 100%;
+    object-fit: cover;
+}
+
+.ad-prev, .ad-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 123, 255, 0.7);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.ad-prev:hover, .ad-next:hover {
+    background: rgba(0, 86, 179, 0.9);
+}
+
+.ad-prev {
+    left: 10px;
+}
+
+.ad-next {
+    right: 10px;
+}
+
+.ad-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    background: #0056b3;
+}
